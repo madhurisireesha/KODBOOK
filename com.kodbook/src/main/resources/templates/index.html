@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Kodbook</title>
+<link rel="stylesheet" type="text/css" th:href="@{/index.css}"/>
+</head>
+<body>
+	<div class="indexcontainer">
+		<div class="indone">
+			<h1>KodBook</h1>
+			<h3>bwhviy wyr ty4jwruy werybukytbewy</h3>
+		</div>
+		<div class="indtwo">
+		<form action="/login" method="post" class="formcontainer">
+			<div>
+			<input type="text" name="username" placeholder="Username" required>
+			</div>
+			<div>
+			<input type="password" name="password" placeholder="Password" required>
+			</div>
+			<div>
+			<input type="submit" value="Login" class="sub">
+			</div>
+			<a href="/openResetPassword">Forgot Password?</a>		
+		</form>
+			<a href="/openSignUp" class="sub" style="text-align:center;padding:8px;box-sizing:border-box;">Create new account</a>
+		</div>
+		<a href="/createPost">create post</a>	
+	</div>
+</body>
+</html>

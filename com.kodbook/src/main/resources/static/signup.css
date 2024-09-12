@@ -1,0 +1,36 @@
+@charset "ISO-8859-1";
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	box-sizing:border-box;
+	
+}
+.signupcontainer{
+	height:100vh;
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	background-color:#ffe4d6;
+}
+.formcontainer{
+	background-color:#facbea;
+	padding-top:50px;
+	padding-bottom:50px;
+	padding-left:50px;
+	padding-right:50px;
+	box-shadow:0 0 15px #d988b9;
+	border-radius:20px;
+	box-sizing:border-box;
+	
+}
+.uname{
+	display:block;
+	padding:5px;
+	border-radius:10px;
+	margin-bottom:5px;
+}
+
+
