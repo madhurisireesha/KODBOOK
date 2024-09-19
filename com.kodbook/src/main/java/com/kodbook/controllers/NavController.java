@@ -47,14 +47,22 @@ public class NavController {
 			model.addAttribute("user", user);
 			
 			//getting particular user post
-			//List<Post> userPosts=user.getPosts();
-			//System.out.print(userPosts.)
-			//model.addAttribute("userPosts",userPosts);
+			List<Post> userPosts=user.getPosts();
+			
+			model.addAttribute("userPosts",userPosts);
 			
 			return "myprofile";
 		}
 		@GetMapping("/openEditProfile")
-		public String openEditProfile() {
-			return "editprofile";
+		public String openEditProfile(HttpSession session) {
+			if(session.getAttribute("username")!=null) {
+				return "editprofile";
+			}
+			return "index";
+		}
+		@GetMapping("/logout")
+		public String logout(HttpSession session) {
+			session.invalidate();
+			return "index";
 		}
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-	<div class="profile-container">
+<div class="profile-container">
 		<div class="navcontainer">
 		<div>
 		<nav>
@@ -15,17 +15,19 @@
         <a href="/goHome"><i class="fas fa-home"></i> News feed</a>
         <a href="/openCreatePost"><i class="fas fa-plus-circle"></i> Create post</a>
         <a href="/openMyProfile"><i class="fas fa-user-circle"></i> My profile</a>
+    	<a href="/openEditProfile"><i class="fas fa-user-circle"></i> Edit profile</a>
+    	
     	</nav>
 		</div>
 	<div class="title">
 	<div>
 		<img src="https://static.vecteezy.com/system/resources/thumbnails/003/654/555/small_2x/k-letter-logo-icon-for-business-and-company-vector.jpg" class="logo"></div>
 		<div><h1 class="titext">OD BOOK</h1></div>
+		</div>
 	</div>
-</div>
-	<div class="bottom">
+<div class="bottom">
 	 <div class="profile-header">
-        <!-- Cover Photo (optional, but to use space effectively) -->
+        
         <div class="cover-photo">
             <!-- If you decide to add a cover photo feature -->
         </div>
@@ -61,11 +63,15 @@
             </div>
         </div>
     </div>
- </div>
-</div>	
+	
+	
+</div>
+	
+	
+	
 
-<!-- Particular User Posts -->
-<div class="posts-container">
+<!-- end -->
+	<div class="posts-container">
         <span th:each="post : ${userPosts}">
             <div class="post-card">
                 <!-- Profile picture and Username -->
@@ -121,14 +127,10 @@
             </div>
         </span>
     </div>
-
-
-
-
-
-
-
-</div>
+	
+	
+	 
+</div><!-- end -->
 
 </body>
 </html>
