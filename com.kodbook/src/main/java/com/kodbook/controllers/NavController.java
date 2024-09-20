@@ -58,11 +58,11 @@ public class NavController {
 		
 		@GetMapping("/openEditProfile")
 		public String openEditProfile(HttpSession session) {
-//			if(session.getAttribute("username")!=null) {
-//				return "editprofile";
-//			}
-//			return "index";
-			return "editprofile";
+			if(session.getAttribute("username")!=null) {
+				return "editprofile";
+		}
+		return "index";
+			
 		}
 		@PostMapping("/profileNew")
 	    public String profiledetails(@RequestParam Long id,Model model) {
@@ -72,7 +72,11 @@ public class NavController {
 	        model.addAttribute("user",user);
 	        return "specificuserprofile"; // Adjust as needed
 	    }
-		
+		@GetMapping("/logout")
+		public String logout(HttpSession session) {
+			session.invalidate();
+			return "index";
+		}
 		
 		
 		

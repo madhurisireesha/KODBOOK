@@ -35,10 +35,10 @@ nav a:hover{
 	border:3px solid #229799;
 	color:#424242;
 }
-.profile-container{
-	
+.profile-containers{
+	height:100vh;
 	background-color:#229799;
-		
+	
 }
 .titext{
 	font-size:35px;
@@ -79,6 +79,7 @@ nav a:hover{
     width: 500px;
     margin-bottom: 20px;
     padding: 20px;
+   
 }
 
 /* Post Header - Profile picture and Username */
@@ -193,7 +194,7 @@ input[type="submit"]:hover {
 	align-items:center;
 	justify-content:center;
 	width:20vw;
-	margin-top:2%;
+	margin-top:10%;
 	background-color:#f5f5f5;
 	padding-top:20px;
 	padding-bottom:20px;
