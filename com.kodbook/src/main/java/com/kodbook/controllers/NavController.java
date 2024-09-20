@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.kodbook.entities.Post;
 import com.kodbook.entities.User;
@@ -65,4 +66,19 @@ public class NavController {
 			session.invalidate();
 			return "index";
 		}
+		
+		@GetMapping("/profileDetails")
+		public String profiledetails(@RequestParam Long id,Model model) {
+		    // Your logic here
+			System.out.println(id);
+			return "index";
+		}
+		
+		
+		
+		
+		
+		
+		
+		
 }
