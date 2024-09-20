@@ -78,11 +78,6 @@ public class UserController
 		service.updateUser(user);
 		model.addAttribute("user",user);
 		return "myProfile";
-		
-		
-		
-		
-		
 	}
 
 }

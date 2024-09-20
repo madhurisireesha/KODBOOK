@@ -52,6 +52,9 @@ nav a{
 	font-size:20px;
 	border-radius:20px;
 }
+.new{
+	cursor:pointer;
+}
 nav a:hover{
 	background:none;
 	border:3px solid #229799;
@@ -102,6 +105,7 @@ nav a:hover{
 	height:20vh;
 	width:20vh;
 	border-radius:65px;
+	cursor:pointer;
 }
 .uname{
 	color:#424242;

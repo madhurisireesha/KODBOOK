@@ -54,26 +54,24 @@ public class NavController {
 			
 			return "myprofile";
 		}
+		
+		
 		@GetMapping("/openEditProfile")
 		public String openEditProfile(HttpSession session) {
-			if(session.getAttribute("username")!=null) {
-				return "editprofile";
-			}
-			return "index";
+//			if(session.getAttribute("username")!=null) {
+//				return "editprofile";
+//			}
+//			return "index";
+			return "editprofile";
 		}
-		@GetMapping("/logout")
-		public String logout(HttpSession session) {
-			session.invalidate();
-			return "index";
-		}
-		
-		@GetMapping("/profileDetails")
-		public String profiledetails(@RequestParam Long id,Model model) {
-		    // Your logic here
-			System.out.println(id);
-			return "index";
-		}
-		
+		@PostMapping("/profileNew")
+	    public String profiledetails(@RequestParam Long id,Model model) {
+	        // Logic to handle the user ID, e.g., fetching user details
+	        System.out.println("User ID: " + id);
+	        User user = userservice.getUserById(id);
+	        model.addAttribute("user",user);
+	        return "specificuserprofile"; // Adjust as needed
+	    }
 		
 		
 		

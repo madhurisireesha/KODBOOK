@@ -1,6 +1,7 @@
 package com.kodbook.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,6 +47,13 @@ public class UserServiceImplementation implements UserService{
 	public void updateUser(User user) {
 		// TODO Auto-generated method stub
 		repo.save(user);
+	}
+
+	@Override
+	public User getUserById(Long id) {
+		// TODO Auto-generated method stub
+		User user=repo.findById(id).get();
+		return user;
 	}
 
 }
